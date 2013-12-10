@@ -1,0 +1,16 @@
+# PHPStorm
+.idea
+
+# Mac
+.DS_Store
+
+# Composer
+vendor
+composer.lock
+composer.phar
+
+# Build
+build/
+
+# Tests
+tests/constants.php
