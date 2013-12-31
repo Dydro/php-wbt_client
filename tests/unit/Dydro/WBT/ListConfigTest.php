@@ -45,13 +45,13 @@ class ListConfigTest extends \PHPUnit_Framework_TestCase
         $this->listConfig->setSortDir('bad');
     }
 
-    public function testGetQueryString()
+    public function testToString()
     {
         $this->listConfig->setPage(1)
                          ->setPageSize(50)
                          ->setSince(1337)
                          ->setSort('name')
                          ->setSortDir(ListConfig::SORT_ASC);
-        $this->assertEquals('page=1&pagesize=50&since=1337&sort=name&sortdir=asc', $this->listConfig->getQueryString());
+        $this->assertEquals('page=1&pagesize=50&since=1337&sort=name&sortdir=asc', (string) $this->listConfig);
     }
 }
