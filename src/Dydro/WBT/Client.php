@@ -217,7 +217,7 @@ class Client
     {
         $class = "\\Dydro\\WBT\\Resource\\{$class}";
         if ($listConfig !== null) {
-            $uri = "{$uri}{$listConfig->getQueryString()}&";
+            $uri = "{$uri}{$listConfig}&";
         }
         $json = $this->request($uri);
         $response = new ListResponse($json);

@@ -49,7 +49,7 @@ class ListConfig
     /**
      * @return string
      */
-    public function getQueryString()
+    public function __toString()
     {
         $queryParts = [];
         if ($this->page != null) {
